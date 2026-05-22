@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online Color Picker - Pick any color and get HEX, RGB, HSL values. Convert between color formats. Perfect for designers and developers.">
+    <meta name="keywords" content="color picker, hex color picker, RGB to HEX, color converter, online color tool">
+    <meta property="og:title" content="Color Picker - Free Online Color Picker Tool | ProSoftwareTools">
+    <link rel="canonical" href="https://prosoftwaretools.com/tools/color-picker.html">
+    <title>Color Picker - Free Online Color Picker Tool | ProSoftwareTools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo"><i class="fas fa-tools"></i><span>Pro<strong>Software</strong>Tools</span></a>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#categories">Categories</a></li>
+                        <li><a href="../index.html#tools" class="active">All Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../categories/image-design.html">Image & Design</a></li>
+                <li>Color Picker</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1><i class="fas fa-eye-dropper"></i> Color Picker</h1>
+                <p>Pick colors and get HEX, RGB, HSL values - perfect for designers and developers</p>
+            </div>
+
+            <div class="tool-wrapper">
+                <div style="text-align:center;">
+                    <input type="color" id="colorInput" value="#4f46e5" style="width:100%; height:80px; border:none; cursor:pointer; border-radius:var(--radius);">
+                </div>
+
+                <div class="color-display" id="colorDisplay" style="background:#4f46e5;"></div>
+
+                <div class="color-values">
+                    <div class="color-value-box">
+                        <label>HEX</label>
+                        <span id="hexValue">#4f46e5</span>
+                    </div>
+                    <div class="color-value-box">
+                        <label>RGB</label>
+                        <span id="rgbValue">rgb(79, 70, 229)</span>
+                    </div>
+                    <div class="color-value-box">
+                        <label>HSL</label>
+                        <span id="hslValue">hsl(243, 75%, 59%)</span>
+                    </div>
+                </div>
+
+                <div class="form-group mt-20">
+                    <label for="hexInput">Enter HEX Code</label>
+                    <input type="text" id="hexInput" placeholder="#4f46e5" value="#4f46e5">
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-primary" onclick="applyHex()"><i class="fas fa-palette"></i> Apply HEX</button>
+                    <button class="btn-secondary" onclick="copyHex()"><i class="fas fa-copy"></i> Copy HEX</button>
+                    <button class="btn-secondary" onclick="copyRgb()"><i class="fas fa-copy"></i> Copy RGB</button>
+                    <button class="btn-secondary" onclick="copyHsl()"><i class="fas fa-copy"></i> Copy HSL</button>
+                </div>
+            </div>
+
+            <div class="ad-sidebar mt-30">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProSoftwareTools.com. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart" style="color:#e74c3c;"></i> for professionals worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/color-picker.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prosoftwaretools.com/sitemap.xml
+
+# Allow all crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow admin or private directories
+Disallow: /assets/

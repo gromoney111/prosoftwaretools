@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online QR Code Generator - Create QR codes for URLs, text, WiFi, emails and more. Download as PNG. No signup required.">
+    <meta name="keywords" content="QR code generator, create QR code, free QR code maker, QR code online">
+    <meta property="og:title" content="QR Code Generator - Free Online QR Code Maker | ProSoftwareTools">
+    <link rel="canonical" href="https://prosoftwaretools.com/tools/qr-code-generator.html">
+    <title>QR Code Generator - Free Online QR Code Maker | ProSoftwareTools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo"><i class="fas fa-tools"></i><span>Pro<strong>Software</strong>Tools</span></a>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#categories">Categories</a></li>
+                        <li><a href="../index.html#tools" class="active">All Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../categories/business-productivity.html">Business & Productivity</a></li>
+                <li>QR Code Generator</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1><i class="fas fa-qrcode"></i> QR Code Generator</h1>
+                <p>Generate QR codes for URLs, text, WiFi credentials and more - download as PNG</p>
+            </div>
+
+            <div class="tool-wrapper">
+                <div class="form-group">
+                    <label for="qrInput">Enter URL or Text</label>
+                    <input type="text" id="qrInput" placeholder="https://example.com or any text...">
+                </div>
+                
+                <div class="btn-group">
+                    <button class="btn-primary" onclick="generateQR()"><i class="fas fa-qrcode"></i> Generate QR Code</button>
+                    <button class="btn-secondary" onclick="downloadQR()"><i class="fas fa-download"></i> Download PNG</button>
+                    <button class="btn-secondary" onclick="clearQR()"><i class="fas fa-trash"></i> Clear</button>
+                </div>
+
+                <div class="result-box text-center">
+                    <h4>Your QR Code</h4>
+                    <div id="qrResult" style="display:flex; justify-content:center; padding:20px;">
+                        <p style="color:var(--gray);">Enter text or URL above and click Generate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-sidebar mt-30">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProSoftwareTools.com. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart" style="color:#e74c3c;"></i> for professionals worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/qr-code-generator.js"></script>
+</body>
+</html>
