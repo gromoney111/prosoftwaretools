@@ -1,5 +1,5 @@
 // URL Shortener Tool with Custom Branded URLs
-const BASE_URL = 'https://prosoftwaretools.com/';
+const BASE_URL = 'https://prosoftware.co/';
 
 function shortenURL() {
     const longUrl = document.getElementById('longUrl').value.trim();
