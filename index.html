@@ -48,6 +48,35 @@
     </script>
 </head>
 <body>
+    <!-- URL Shortener Redirect Handler -->
+    <script>
+    (function() {
+        try {
+            var params = new URLSearchParams(window.location.search);
+            var goParam = params.get('go');
+            if (goParam) {
+                var links = JSON.parse(localStorage.getItem('shortLinks') || '{}');
+                var entry = links[goParam];
+                if (entry) {
+                    var targetUrl = (typeof entry === 'object') ? entry.long : entry;
+                    if (targetUrl) {
+                        window.location.replace(targetUrl);
+                        return;
+                    }
+                }
+                // Link not found - show message
+                document.addEventListener('DOMContentLoaded', function() {
+                    var msg = document.createElement('div');
+                    msg.style.cssText = 'position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#ef4444;color:white;padding:14px 24px;border-radius:8px;z-index:99999;font-family:Inter,sans-serif;box-shadow:0 10px 25px rgba(0,0,0,0.2);';
+                    msg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Short link "' + goParam + '" not found in this browser.';
+                    document.body.appendChild(msg);
+                    setTimeout(function() { msg.remove(); }, 5000);
+                });
+            }
+        } catch (e) { console.error(e); }
+    })();
+    </script>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
