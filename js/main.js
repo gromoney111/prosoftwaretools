@@ -66,7 +66,12 @@ function initSearch() {
         { name: 'Base64 Encoder', url: 'tools/base64-encoder.html' },
         { name: 'Color Picker', url: 'tools/color-picker.html' },
         { name: 'MD5 Generator', url: 'tools/md5-generator.html' },
-        { name: 'URL Encoder/Decoder', url: 'tools/url-encoder-decoder.html' }
+        { name: 'URL Encoder/Decoder', url: 'tools/url-encoder-decoder.html' },
+        { name: 'URL Shortener', url: 'tools/url-shortener.html' },
+        { name: 'Image Watermark', url: 'tools/image-watermark.html' },
+        { name: 'Resume Maker', url: 'tools/resume-maker.html' },
+        { name: 'Cover Letter Generator', url: 'tools/cover-letter-generator.html' },
+        { name: 'Business Name Generator', url: 'tools/business-name-generator.html' }
     ];
 
     function handleSearch(input) {
