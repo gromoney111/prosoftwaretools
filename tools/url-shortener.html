@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free URL Shortener - Create custom branded short links with prosoftware.co/yourname. Fast and easy URL shortening service.">
-    <meta name="keywords" content="URL shortener, custom URL, branded links, short URL, link shortener, custom domain shortener">
+    <meta name="description" content="Free URL Shortener - Create branded short links with prosoftware/yourname. Type your own custom name. Fast and easy.">
+    <meta name="keywords" content="URL shortener, custom URL, branded links, short URL, link shortener, custom domain shortener, prosoftware short links">
     <link rel="canonical" href="https://prosoftwaretools.com/tools/url-shortener.html">
     <title>URL Shortener with Custom Branded Links | ProSoftwareTools</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -47,7 +47,7 @@
         <div class="container">
             <div class="tool-header">
                 <h1><i class="fas fa-link"></i> URL Shortener with Custom Brand</h1>
-                <p>Create memorable branded short links like prosoftware.co/yourname</p>
+                <p>Create memorable branded short links like <strong>prosoftware/yourname</strong></p>
             </div>
 
             <div class="tool-wrapper">
@@ -57,12 +57,12 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="customName">Custom Name (Optional)</label>
-                    <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-                        <span style="font-family:monospace; color:var(--primary); font-size:0.95rem; font-weight:600;">prosoftware.co/</span>
-                        <input type="text" id="customName" placeholder="my-link" style="flex:1; min-width:200px;">
+                    <label for="customName">Your Branded Short URL</label>
+                    <div style="display:flex; align-items:stretch; border:2px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:var(--transition);" id="urlInputBox">
+                        <span style="background:linear-gradient(135deg, var(--primary), var(--secondary)); color:white; padding:14px 20px; font-family:monospace; font-size:1rem; font-weight:700; display:flex; align-items:center; white-space:nowrap;">prosoftware/</span>
+                        <input type="text" id="customName" placeholder="type-your-name" style="flex:1; border:none; padding:14px 18px; font-size:1rem; font-family:monospace; font-weight:500;">
                     </div>
-                    <small style="color:var(--gray); font-size:0.8rem; margin-top:4px;">Leave blank for random name. Letters, numbers, hyphens only (min 3 chars)</small>
+                    <small style="color:var(--gray); font-size:0.8rem; margin-top:6px; display:block;">Type your own custom name after the slash. Leave blank for auto-generated. Letters, numbers, hyphens only.</small>
                 </div>
                 
                 <div class="btn-group">
