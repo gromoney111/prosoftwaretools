@@ -1,5 +1,5 @@
 // URL Encoder/Decoder Tool
-function encodeURL() {
+function encodeUrlText() {
     const input = document.getElementById('urlInput').value;
     if (!input) {
         showToast('Please enter a URL or text to encode!', 'warning');
@@ -15,7 +15,7 @@ function encodeURL() {
     }
 }
 
-function decodeURL() {
+function decodeUrlText() {
     const input = document.getElementById('urlInput').value;
     if (!input) {
         showToast('Please enter an encoded URL to decode!', 'warning');

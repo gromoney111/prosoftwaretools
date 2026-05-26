@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free URL Shortener - Create real working short URLs with your custom name. Branded display + working redirect link.">
+    <meta name="keywords" content="URL shortener, custom URL, branded links, short URL, working short URL, link shortener">
+    <link rel="canonical" href="https://prosoftwaretools.com/tools/url-shortener.html">
+    <title>URL Shortener - Create Working Custom Branded Short URLs | ProSoftwareTools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo"><i class="fas fa-tools"></i><span>Pro<strong>Software</strong>Tools</span></a>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#categories">Categories</a></li>
+                        <li><a href="../index.html#tools" class="active">All Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../categories/seo-marketing.html">SEO & Marketing</a></li>
+                <li>URL Shortener</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1><i class="fas fa-link"></i> URL Shortener with Custom Brand</h1>
+                <p>Create <strong>real working</strong> short links with your own custom name</p>
+            </div>
+
+            <div class="tool-wrapper">
+                <div class="form-group">
+                    <label for="longUrl">Enter your long URL</label>
+                    <input type="url" id="longUrl" placeholder="https://example.com/very/long/url/here">
+                </div>
+                
+                <div class="form-group">
+                    <label for="customName">Your Custom Name</label>
+                    <div style="display:flex; align-items:stretch; border:2px solid var(--border); border-radius:var(--radius); overflow:hidden;">
+                        <span style="background:linear-gradient(135deg, var(--primary), var(--secondary)); color:white; padding:14px 20px; font-family:monospace; font-size:1rem; font-weight:700; display:flex; align-items:center; white-space:nowrap;">prosoftware/</span>
+                        <input type="text" id="customName" placeholder="type-your-name" style="flex:1; border:none; padding:14px 18px; font-size:1rem; font-family:monospace;">
+                    </div>
+                    <small style="color:var(--gray); font-size:0.8rem; margin-top:6px; display:block;">
+                        Min 3 characters. Letters, numbers, hyphens only. Leave blank for auto-generated.
+                    </small>
+                </div>
+                
+                <div class="btn-group">
+                    <button class="btn-primary" onclick="shortenURL()"><i class="fas fa-magic"></i> Create Short URL</button>
+                </div>
+
+                <div id="resultBox" style="display:none; padding:24px; background:linear-gradient(135deg, rgba(79,70,229,0.05), rgba(14,165,233,0.05)); border:2px solid var(--primary); border-radius:var(--radius-lg); margin-top:20px;">
+                    
+                    <div style="margin-bottom:20px;">
+                        <h4 style="margin-bottom:8px; color:var(--gray); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.5px;">
+                            <i class="fas fa-tag"></i> Branded Display (For Marketing)
+                        </h4>
+                        <div id="brandedUrlResult" style="font-size:1.4rem; font-weight:700; color:var(--primary); word-break:break-all; padding:12px; background:white; border-radius:8px; border:1px solid var(--border);"></div>
+                        <button class="btn-secondary" onclick="copyBrandedUrl()" style="margin-top:8px; padding:6px 14px; font-size:0.85rem;">
+                            <i class="fas fa-copy"></i> Copy Branded
+                        </button>
+                    </div>
+
+                    <div style="margin-bottom:16px;">
+                        <h4 style="margin-bottom:8px; color:var(--success); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.5px;">
+                            <i class="fas fa-check-circle"></i> Working URL (Click to test redirect!)
+                        </h4>
+                        <a id="realUrlResult" href="#" target="_blank" style="display:block; font-size:1rem; font-weight:600; color:var(--success); word-break:break-all; padding:12px; background:white; border-radius:8px; border:2px solid var(--success); text-decoration:none;"></a>
+                        <button class="btn-primary" onclick="copyRealUrl()" style="margin-top:8px;">
+                            <i class="fas fa-copy"></i> Copy Working URL
+                        </button>
+                    </div>
+
+                    <div style="font-size:0.8rem; color:var(--gray); word-break:break-all; padding-top:12px; border-top:1px solid var(--border);">
+                        <strong>Original:</strong> <span id="originalUrlDisplay"></span>
+                    </div>
+                </div>
+
+                <div style="margin-top:30px;">
+                    <h3 style="margin-bottom:16px; display:flex; justify-content:space-between; align-items:center;">
+                        <span>Your Short Links History</span>
+                        <button class="btn-secondary" onclick="clearAllLinks()" style="padding:6px 14px; font-size:0.85rem;">Clear All</button>
+                    </h3>
+                    <div id="linkHistory"></div>
+                </div>
+
+                <div style="margin-top:30px; padding:18px; background:rgba(16,185,129,0.08); border-left:4px solid var(--success); border-radius:8px;">
+                    <strong style="color:var(--success);"><i class="fas fa-info-circle"></i> How it works:</strong>
+                    <ul style="font-size:0.9rem; margin-top:8px; padding-left:20px; color:var(--dark-light); line-height:1.7;">
+                        <li><strong>Branded Display:</strong> "prosoftware/yourname" - for marketing/branding only</li>
+                        <li><strong>Working URL:</strong> Real link that actually redirects when clicked</li>
+                        <li>Links are saved in your browser's localStorage</li>
+                        <li><strong>Note:</strong> Links work in the same browser. For cross-device sharing, you'll need a backend service or paid URL shortener API.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProSoftwareTools.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/url-shortener.js"></script>
+</body>
+</html>

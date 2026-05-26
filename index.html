@@ -25,12 +25,12 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLHKNCV41S"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+        gtag('config', 'G-VLHKNCV41S');
     </script>
     <script type="application/ld+json">
     {
@@ -48,6 +48,35 @@
     </script>
 </head>
 <body>
+    <!-- URL Shortener Redirect Handler -->
+    <script>
+    (function() {
+        try {
+            var params = new URLSearchParams(window.location.search);
+            var goParam = params.get('go');
+            if (goParam) {
+                var links = JSON.parse(localStorage.getItem('shortLinks') || '{}');
+                var entry = links[goParam];
+                if (entry) {
+                    var targetUrl = (typeof entry === 'object') ? entry.long : entry;
+                    if (targetUrl) {
+                        window.location.replace(targetUrl);
+                        return;
+                    }
+                }
+                // Link not found - show message
+                document.addEventListener('DOMContentLoaded', function() {
+                    var msg = document.createElement('div');
+                    msg.style.cssText = 'position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#ef4444;color:white;padding:14px 24px;border-radius:8px;z-index:99999;font-family:Inter,sans-serif;box-shadow:0 10px 25px rgba(0,0,0,0.2);';
+                    msg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Short link "' + goParam + '" not found in this browser.';
+                    document.body.appendChild(msg);
+                    setTimeout(function() { msg.remove(); }, 5000);
+                });
+            }
+        } catch (e) { console.error(e); }
+    })();
+    </script>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -100,7 +129,7 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">10+</span>
+                        <span class="stat-number">15+</span>
                         <span class="stat-label">Free Tools</span>
                     </div>
                     <div class="stat">
@@ -262,6 +291,36 @@
                     <h3>URL Encoder/Decoder</h3>
                     <p>Encode or decode URLs for safe transmission</p>
                     <span class="tool-badge">Data & Conversion</span>
+                </a>
+                <a href="tools/url-shortener.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-link"></i></div>
+                    <h3>URL Shortener</h3>
+                    <p>Create custom branded short links instantly</p>
+                    <span class="tool-badge">SEO & Marketing</span>
+                </a>
+                <a href="tools/image-watermark.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-stamp"></i></div>
+                    <h3>Image Watermark</h3>
+                    <p>Add custom text watermarks to protect your images</p>
+                    <span class="tool-badge">Image & Design</span>
+                </a>
+                <a href="tools/resume-maker.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>Resume Maker</h3>
+                    <p>Build a professional resume in minutes - free PDF</p>
+                    <span class="tool-badge">Business</span>
+                </a>
+                <a href="tools/cover-letter-generator.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-envelope-open-text"></i></div>
+                    <h3>Cover Letter Generator</h3>
+                    <p>Generate professional cover letters in seconds</p>
+                    <span class="tool-badge">Business</span>
+                </a>
+                <a href="tools/business-name-generator.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Business Name Generator</h3>
+                    <p>Get creative business name ideas for your startup</p>
+                    <span class="tool-badge">Business</span>
                 </a>
             </div>
         </div>
