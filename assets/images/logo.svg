@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <rect width="400" height="120" rx="8" fill="#0f1b3d"/>
+  <!-- Wrench -->
+  <g transform="translate(170, 45) scale(0.7)">
+    <path d="M20 5c-3.5 0-6.5 1.8-8.3 4.5l3.5 3.5c1.5-1.2 3.2-1.9 4.8-1.9 1.1 0 2.1.2 3.1.7l3.3-3.3C24.2 7 22.2 5 20 5z" fill="#9ca3af"/>
+    <rect x="6" y="22" width="6" height="22" rx="2.5" transform="rotate(-45 9 33)" fill="#9ca3af"/>
+    <path d="M38 5l-4.8 4.8 6.4 6.4 4.8-4.8c1.6-1.6 1.6-4.2 0-5.8l-.6-.6c-1.6-1.6-4.2-1.6-5.8 0z" fill="#f59e0b"/>
+    <rect x="24" y="16" width="5" height="24" rx="1.5" transform="rotate(-45 26.5 28)" fill="#f59e0b"/>
+  </g>
+  <!-- Text -->
+  <text x="200" y="40" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="28" font-weight="900" fill="#f0e6d3" letter-spacing="3">PRO SOFTWARE TOOLS</text>
+  <text x="200" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#8b9dc3" letter-spacing="4">YOUR ULTIMATE TOOL RESOURCE</text>
+</svg>
