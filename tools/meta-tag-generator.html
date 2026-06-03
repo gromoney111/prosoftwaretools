@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Meta Tag Generator - Create SEO-optimized meta tags for your website. Generate Open Graph, Twitter Cards, and essential HTML meta tags instantly.">
+    <meta name="keywords" content="meta tag generator, SEO meta tags, open graph generator, twitter card generator, meta description generator, WordPress meta tags">
+    <link rel="canonical" href="https://prosoftwaretools.com/tools/meta-tag-generator.html">
+    <title>Meta Tag Generator - Free SEO Meta Tags Creator | ProSoftwareTools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo"><i class="fas fa-tools"></i><span>Pro<strong>Software</strong>Tools</span></a>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#categories">Categories</a></li>
+                        <li><a href="../index.html#tools" class="active">All Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../categories/seo-marketing.html">SEO & Marketing</a></li>
+                <li>Meta Tag Generator</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1><i class="fas fa-tags"></i> Meta Tag Generator</h1>
+                <p>Generate SEO-optimized meta tags for your website including Open Graph & Twitter Cards</p>
+            </div>
+
+            <div class="tool-wrapper" id="metaForm">
+                <h3 style="margin-bottom:16px;">Basic Information</h3>
+                
+                <div class="form-group">
+                    <label for="mtTitle">Page Title * <span id="titleCount" style="float:right; font-weight:400; font-size:0.8rem;">0/60</span></label>
+                    <input type="text" id="mtTitle" placeholder="My Awesome Website - Best Tools Online" maxlength="70">
+                    <small style="color:var(--gray); font-size:0.75rem;">Recommended: 50-60 characters for Google</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="mtDescription">Meta Description * <span id="descCount" style="float:right; font-weight:400; font-size:0.8rem;">0/160</span></label>
+                    <textarea id="mtDescription" placeholder="A brief, compelling description of your page that will appear in search results..." style="min-height:80px;" maxlength="170"></textarea>
+                    <small style="color:var(--gray); font-size:0.75rem;">Recommended: 140-160 characters for Google</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="mtKeywords">Keywords (comma separated)</label>
+                    <input type="text" id="mtKeywords" placeholder="keyword1, keyword2, keyword3">
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+                    <div class="form-group">
+                        <label for="mtAuthor">Author</label>
+                        <input type="text" id="mtAuthor" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="mtUrl">Page URL</label>
+                        <input type="url" id="mtUrl" placeholder="https://yourwebsite.com/page">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mtImage">Image URL (for social sharing)</label>
+                    <input type="url" id="mtImage" placeholder="https://yourwebsite.com/image.jpg">
+                </div>
+
+                <h3 style="margin:24px 0 16px;">Advanced Options</h3>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px;">
+                    <div class="form-group">
+                        <label for="mtRobots">Robots</label>
+                        <select id="mtRobots" style="padding:12px; border:2px solid var(--border); border-radius:var(--radius); font-size:0.95rem;">
+                            <option value="index, follow">Index, Follow</option>
+                            <option value="index, nofollow">Index, Nofollow</option>
+                            <option value="noindex, follow">Noindex, Follow</option>
+                            <option value="noindex, nofollow">Noindex, Nofollow</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mtOgType">OG Type</label>
+                        <select id="mtOgType" style="padding:12px; border:2px solid var(--border); border-radius:var(--radius); font-size:0.95rem;">
+                            <option value="website">Website</option>
+                            <option value="article">Article</option>
+                            <option value="product">Product</option>
+                            <option value="profile">Profile</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mtTwitterCard">Twitter Card</label>
+                        <select id="mtTwitterCard" style="padding:12px; border:2px solid var(--border); border-radius:var(--radius); font-size:0.95rem;">
+                            <option value="summary_large_image">Large Image</option>
+                            <option value="summary">Summary</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display:flex; gap:20px; margin:16px 0;">
+                    <label style="display:flex; align-items:center; gap:8px; font-size:0.9rem; cursor:pointer;">
+                        <input type="checkbox" id="mtViewport" checked style="width:18px; height:18px; accent-color:var(--primary);"> Include Viewport
+                    </label>
+                    <label style="display:flex; align-items:center; gap:8px; font-size:0.9rem; cursor:pointer;">
+                        <input type="checkbox" id="mtCharset" checked style="width:18px; height:18px; accent-color:var(--primary);"> Include Charset
+                    </label>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-primary" onclick="generateMetaTags()"><i class="fas fa-magic"></i> Generate Meta Tags</button>
+                    <button class="btn-secondary" onclick="clearMetaForm()"><i class="fas fa-trash"></i> Clear</button>
+                </div>
+
+                <!-- Google Preview -->
+                <div id="mtPreview" style="display:none; margin-top:24px; padding:20px; background:white; border:1px solid var(--border); border-radius:var(--radius-lg);">
+                    <h4 style="margin-bottom:12px; font-size:0.85rem; color:var(--gray); text-transform:uppercase;">Google Search Preview</h4>
+                    <div style="max-width:600px;">
+                        <div id="previewTitle" style="font-size:1.2rem; color:#1a0dab; font-weight:400; margin-bottom:2px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;"></div>
+                        <div id="previewUrl" style="font-size:0.85rem; color:#006621; margin-bottom:4px;"></div>
+                        <div id="previewDesc" style="font-size:0.88rem; color:#545454; line-height:1.5; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;"></div>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div id="mtResult" style="display:none; margin-top:24px;">
+                    <div class="result-box">
+                        <h4>Generated Meta Tags <small style="font-weight:400; color:var(--gray);">(copy and paste into your &lt;head&gt;)</small></h4>
+                        <pre id="mtOutput" style="white-space:pre-wrap; font-family:'Courier New', monospace; font-size:0.85rem; line-height:1.6; background:var(--dark); color:#10b981; padding:20px; border-radius:var(--radius); overflow-x:auto;"></pre>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn-primary" onclick="copyMetaTags()"><i class="fas fa-copy"></i> Copy All Tags</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-sidebar mt-30">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProSoftwareTools.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/meta-tag-generator.js"></script>
+</body>
+</html>

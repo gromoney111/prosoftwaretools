@@ -71,7 +71,9 @@ function initSearch() {
         { name: 'Image Watermark', url: 'tools/image-watermark.html' },
         { name: 'Resume Maker', url: 'tools/resume-maker.html' },
         { name: 'Cover Letter Generator', url: 'tools/cover-letter-generator.html' },
-        { name: 'Business Name Generator', url: 'tools/business-name-generator.html' }
+        { name: 'Business Name Generator', url: 'tools/business-name-generator.html' },
+        { name: 'Meta Tag Generator', url: 'tools/meta-tag-generator.html' },
+        { name: 'Schema Markup Generator', url: 'tools/schema-generator.html' }
     ];
 
     function handleSearch(input) {
