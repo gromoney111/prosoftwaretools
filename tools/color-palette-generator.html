@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online Color Palette Generator - Generate beautiful color harmonies, complementary, analogous, triadic palettes. Export as CSS variables. No signup required.">
+    <meta name="keywords" content="color palette generator, color harmony, complementary colors, analogous colors, triadic colors, CSS color palette">
+    <meta property="og:title" content="Color Palette Generator - Free Online Color Harmony Tool | ProSoftwareTools">
+    <meta property="og:description" content="Generate beautiful color palettes with complementary, analogous, triadic, and monochromatic harmonies.">
+    <link rel="canonical" href="https://prosoftwaretools.com/tools/color-palette-generator.html">
+    <title>Color Palette Generator - Free Online Color Harmony Tool | ProSoftwareTools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo"><i class="fas fa-tools"></i><span>Pro<strong>Software</strong>Tools</span></a>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#categories">Categories</a></li>
+                        <li><a href="../index.html#tools" class="active">All Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../categories/image-design.html">Image & Design</a></li>
+                <li>Color Palette Generator</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <a href="../index.html"><img src="../assets/favicon.svg" alt="ProSoftwareTools Logo" style="width:50px;height:50px;margin-bottom:10px;display:block;margin-left:auto;margin-right:auto;"></a>
+                <h1><i class="fas fa-swatchbook"></i> Color Palette Generator</h1>
+                <p>Generate beautiful color harmonies and export as CSS variables</p>
+            </div>
+
+            <div class="tool-wrapper">
+                <div class="form-group">
+                    <label for="baseColor">Base Color</label>
+                    <div style="display:flex;align-items:center;gap:15px;">
+                        <input type="color" id="baseColor" value="#667eea" style="width:60px;height:40px;border:none;cursor:pointer;">
+                        <input type="text" id="baseColorHex" value="#667eea" style="max-width:120px;" placeholder="#667eea">
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-primary" onclick="generatePalette()"><i class="fas fa-palette"></i> Generate Palette</button>
+                    <button class="btn-secondary" onclick="randomPalette()"><i class="fas fa-random"></i> Random Palette</button>
+                    <button class="btn-secondary" onclick="exportCSS()"><i class="fas fa-code"></i> Export CSS</button>
+                </div>
+
+                <div id="palettesOutput"></div>
+            </div>
+
+            <!-- Ad -->
+            <div class="ad-sidebar mt-30">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProSoftwareTools.com. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart" style="color:#e74c3c;"></i> for professionals worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/color-palette-generator.js"></script>
+</body>
+</html>

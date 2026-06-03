@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online Headline Analyzer - Score your headlines out of 100, get improvement suggestions, check power words, emotional words, and word balance. No signup required.">
+    <meta name="keywords" content="headline analyzer, headline score, blog title analyzer, headline checker, SEO headline tool, content title optimizer">
+    <meta property="og:title" content="Headline Analyzer - Free Online Headline Scoring Tool | ProSoftwareTools">
+    <meta property="og:description" content="Score your headlines, get improvement suggestions, and optimize for click-through rates.">
+    <link rel="canonical" href="https://prosoftwaretools.com/tools/headline-analyzer.html">
+    <title>Headline Analyzer - Free Online Headline Scoring Tool | ProSoftwareTools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo"><i class="fas fa-tools"></i><span>Pro<strong>Software</strong>Tools</span></a>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#categories">Categories</a></li>
+                        <li><a href="../index.html#tools" class="active">All Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../categories/content-creation.html">Content Creation</a></li>
+                <li>Headline Analyzer</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <a href="../index.html"><img src="../assets/favicon.svg" alt="ProSoftwareTools Logo" style="width:50px;height:50px;margin-bottom:10px;display:block;margin-left:auto;margin-right:auto;"></a>
+                <h1><i class="fas fa-heading"></i> Headline Analyzer</h1>
+                <p>Score your headlines and get suggestions to improve click-through rates</p>
+            </div>
+
+            <div class="tool-wrapper">
+                <div class="form-group">
+                    <label for="headlineInput">Enter Your Headline</label>
+                    <input type="text" id="headlineInput" placeholder="e.g. 10 Proven Ways to Boost Your Website Traffic">
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-primary" onclick="analyzeHeadline()"><i class="fas fa-chart-bar"></i> Analyze Headline</button>
+                    <button class="btn-secondary" onclick="clearHeadline()"><i class="fas fa-trash"></i> Clear</button>
+                </div>
+
+                <div class="result-box" id="resultBox" style="display:none;">
+                    <div id="scoreMeter" style="text-align:center;margin-bottom:20px;">
+                        <div style="width:120px;height:120px;border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;border:8px solid #ddd;" id="scoreCircle">
+                            <span style="font-size:2rem;font-weight:800;" id="scoreValue">0</span>
+                        </div>
+                        <p style="font-weight:600;" id="scoreLabel">Enter a headline to analyze</p>
+                    </div>
+
+                    <div class="stats-grid" style="margin-bottom:20px;">
+                        <div class="stat-box">
+                            <span class="number" id="wordCountStat">0</span>
+                            <span class="label">Words</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number" id="charCountStat">0</span>
+                            <span class="label">Characters</span>
+                        </div>
+                    </div>
+
+                    <div id="wordBalance" style="margin-bottom:20px;"></div>
+                    <div id="suggestions" style="margin-bottom:20px;"></div>
+                </div>
+            </div>
+
+            <!-- Ad -->
+            <div class="ad-sidebar mt-30">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProSoftwareTools.com. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart" style="color:#e74c3c;"></i> for professionals worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/headline-analyzer.js"></script>
+</body>
+</html>

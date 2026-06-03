@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online Regex Tester tool - Test and debug regular expressions with real-time matching, capture groups, and flag support. No signup required.">
+    <meta name="keywords" content="regex tester, regular expression tester, regex debugger, regex online, regex match, regex tool">
+    <meta property="og:title" content="Regex Tester - Free Online Regular Expression Tester | ProSoftwareTools">
+    <meta property="og:description" content="Test and debug regular expressions with real-time matching, capture groups, and flag support.">
+    <link rel="canonical" href="https://prosoftwaretools.com/tools/regex-tester.html">
+    <title>Regex Tester - Free Online Regular Expression Tester | ProSoftwareTools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo"><i class="fas fa-tools"></i><span>Pro<strong>Software</strong>Tools</span></a>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#categories">Categories</a></li>
+                        <li><a href="../index.html#tools" class="active">All Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../categories/developer-coding.html">Developer & Coding</a></li>
+                <li>Regex Tester</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <a href="../index.html"><img src="../assets/favicon.svg" alt="ProSoftwareTools Logo" style="width:50px;height:50px;margin-bottom:10px;display:block;margin-left:auto;margin-right:auto;"></a>
+                <h1><i class="fas fa-asterisk"></i> Regex Tester</h1>
+                <p>Test and debug regular expressions with real-time matching and capture groups</p>
+            </div>
+
+            <div class="tool-wrapper">
+                <div class="form-group">
+                    <label for="regexPattern">Regular Expression Pattern</label>
+                    <input type="text" id="regexPattern" placeholder="Enter your regex pattern, e.g. \d+">
+                </div>
+
+                <div class="form-group">
+                    <label>Flags</label>
+                    <div class="btn-group" style="justify-content: flex-start; gap: 15px;">
+                        <label style="display:flex;align-items:center;gap:5px;cursor:pointer;">
+                            <input type="checkbox" id="flagG" checked> <span>Global (g)</span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:5px;cursor:pointer;">
+                            <input type="checkbox" id="flagI"> <span>Case Insensitive (i)</span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:5px;cursor:pointer;">
+                            <input type="checkbox" id="flagM"> <span>Multiline (m)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="testString">Test String</label>
+                    <textarea id="testString" placeholder="Enter text to test your regex against..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-primary" onclick="testRegex()"><i class="fas fa-play"></i> Test</button>
+                    <button class="btn-secondary" onclick="clearAll()"><i class="fas fa-trash"></i> Clear</button>
+                </div>
+
+                <div class="result-box" id="resultBox" style="display:none;">
+                    <h3><i class="fas fa-check-circle"></i> Results</h3>
+                    <div class="stats-grid" style="margin-bottom:15px;">
+                        <div class="stat-box">
+                            <span class="number" id="matchCount">0</span>
+                            <span class="label">Matches</span>
+                        </div>
+                    </div>
+                    <div id="highlightedResult" style="background:#1a1a2e;color:#e0e0e0;padding:15px;border-radius:8px;font-family:monospace;white-space:pre-wrap;word-break:break-all;margin-bottom:15px;"></div>
+                    <div id="captureGroups" style="display:none;">
+                        <h4 style="margin-bottom:10px;">Capture Groups</h4>
+                        <div id="groupsList" style="background:#f8f9fa;padding:15px;border-radius:8px;font-family:monospace;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad -->
+            <div class="ad-sidebar mt-30">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProSoftwareTools.com. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart" style="color:#e74c3c;"></i> for professionals worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/regex-tester.js"></script>
+</body>
+</html>

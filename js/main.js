@@ -73,7 +73,11 @@ function initSearch() {
         { name: 'Cover Letter Generator', url: 'tools/cover-letter-generator.html' },
         { name: 'Business Name Generator', url: 'tools/business-name-generator.html' },
         { name: 'Meta Tag Generator', url: 'tools/meta-tag-generator.html' },
-        { name: 'Schema Markup Generator', url: 'tools/schema-generator.html' }
+        { name: 'Schema Markup Generator', url: 'tools/schema-generator.html' },
+        { name: 'Regex Tester', url: 'tools/regex-tester.html' },
+        { name: 'Color Palette Generator', url: 'tools/color-palette-generator.html' },
+        { name: 'Headline Analyzer', url: 'tools/headline-analyzer.html' },
+        { name: 'Readability Checker', url: 'tools/readability-checker.html' }
     ];
 
     function handleSearch(input) {
