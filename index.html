@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ProSoftwareTools - Free online tools for developers, designers, marketers, and professionals. Word Counter, QR Code Generator, JSON Formatter, Password Generator & more.">
     <meta name="keywords" content="online tools, free tools, developer tools, SEO tools, marketing tools, word counter, QR code generator, password generator, JSON formatter, image resizer">
@@ -82,8 +84,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="/" class="logo">
-                    <i class="fas fa-tools"></i>
-                    <span>Pro<strong>Software</strong>Tools</span>
+                    <img src="assets/images/logo.svg" alt="Pro Software Tools" style="height:40px;">
                 </a>
                 <div class="nav-menu" id="navMenu">
                     <ul class="nav-links">
@@ -109,6 +110,7 @@
                         <input type="text" placeholder="Search tools..." id="searchInput">
                         <button><i class="fas fa-search"></i></button>
                     </div>
+                    <a href="login.html" class="btn-login" id="authBtn"><i class="fas fa-user"></i> Login</a>
                     <button class="mobile-toggle" id="mobileToggle">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -129,7 +131,7 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">15+</span>
+                        <span class="stat-number">21+</span>
                         <span class="stat-label">Free Tools</span>
                     </div>
                     <div class="stat">
@@ -298,6 +300,18 @@
                     <p>Create custom branded short links instantly</p>
                     <span class="tool-badge">SEO & Marketing</span>
                 </a>
+                <a href="tools/meta-tag-generator.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Meta Tag Generator</h3>
+                    <p>Generate SEO meta tags, Open Graph & Twitter Cards</p>
+                    <span class="tool-badge">SEO & Marketing</span>
+                </a>
+                <a href="tools/schema-generator.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Schema Markup Generator</h3>
+                    <p>Create JSON-LD structured data for rich snippets</p>
+                    <span class="tool-badge">SEO & Marketing</span>
+                </a>
                 <a href="tools/image-watermark.html" class="tool-card">
                     <div class="tool-icon"><i class="fas fa-stamp"></i></div>
                     <h3>Image Watermark</h3>
@@ -321,6 +335,30 @@
                     <h3>Business Name Generator</h3>
                     <p>Get creative business name ideas for your startup</p>
                     <span class="tool-badge">Business</span>
+                </a>
+                <a href="tools/regex-tester.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-asterisk"></i></div>
+                    <h3>Regex Tester</h3>
+                    <p>Test and debug regular expressions with real-time matching</p>
+                    <span class="tool-badge">Developer</span>
+                </a>
+                <a href="tools/color-palette-generator.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-swatchbook"></i></div>
+                    <h3>Color Palette Generator</h3>
+                    <p>Generate beautiful color harmonies and export as CSS</p>
+                    <span class="tool-badge">Image & Design</span>
+                </a>
+                <a href="tools/headline-analyzer.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-heading"></i></div>
+                    <h3>Headline Analyzer</h3>
+                    <p>Score your headlines and get improvement suggestions</p>
+                    <span class="tool-badge">Content Creation</span>
+                </a>
+                <a href="tools/readability-checker.html" class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-book-reader"></i></div>
+                    <h3>Readability Checker</h3>
+                    <p>Check Flesch Reading Ease and Grade Level scores</p>
+                    <span class="tool-badge">Content Creation</span>
                 </a>
             </div>
         </div>
@@ -433,8 +471,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="/" class="footer-logo">
-                        <i class="fas fa-tools"></i>
-                        <span>Pro<strong>Software</strong>Tools</span>
+                        <img src="assets/images/logo.svg" alt="Pro Software Tools" style="height:36px;">
                     </a>
                     <p>Free online tools for developers, designers, marketers, and professionals. Built with love for the community.</p>
                     <div class="social-links">
@@ -485,5 +522,9 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>

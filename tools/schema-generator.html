@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Free Schema Markup Generator - Create JSON-LD structured data for rich snippets. Supports LocalBusiness, Article, Product, FAQ, Organization schema types.">
+    <meta name="keywords" content="schema markup generator, JSON-LD generator, structured data, rich snippets, schema.org, SEO schema">
+    <link rel="canonical" href="https://prosoftwaretools.com/tools/schema-generator.html">
+    <title>Schema Markup Generator - Free JSON-LD Structured Data Tool | ProSoftwareTools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" alt="Pro Software Tools" style="height:40px;"></a>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#categories">Categories</a></li>
+                        <li><a href="../index.html#tools" class="active">All Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../categories/seo-marketing.html">SEO & Marketing</a></li>
+                <li>Schema Markup Generator</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h1><i class="fas fa-code"></i> Schema Markup Generator</h1>
+                <p>Generate JSON-LD structured data for Google rich snippets - boost your search visibility</p>
+            </div>
+
+            <div class="tool-wrapper">
+                <div class="form-group">
+                    <label for="schemaType">Schema Type</label>
+                    <select id="schemaType" onchange="changeSchemaType()" style="padding:12px 16px; border:2px solid var(--border); border-radius:var(--radius); font-size:0.95rem; width:100%;">
+                        <option value="localbusiness">Local Business</option>
+                        <option value="article">Article / Blog Post</option>
+                        <option value="product">Product</option>
+                        <option value="faq">FAQ Page</option>
+                        <option value="organization">Organization</option>
+                        <option value="person">Person</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sgName">Name / Title *</label>
+                    <input type="text" id="sgName" placeholder="Business or page name">
+                </div>
+
+                <div class="form-group">
+                    <label for="sgDescription">Description</label>
+                    <textarea id="sgDescription" placeholder="Brief description..." style="min-height:80px;"></textarea>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+                    <div class="form-group">
+                        <label for="sgUrl">Website URL</label>
+                        <input type="url" id="sgUrl" placeholder="https://yourwebsite.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="sgImage">Image URL</label>
+                        <input type="url" id="sgImage" placeholder="https://yourwebsite.com/logo.png">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+                    <div class="form-group">
+                        <label for="sgPhone">Phone Number</label>
+                        <input type="text" id="sgPhone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="sgStreet">Street Address</label>
+                        <input type="text" id="sgStreet" placeholder="Street Address">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:14px;">
+                    <div class="form-group">
+                        <label for="sgCity">City</label>
+                        <input type="text" id="sgCity" placeholder="City">
+                    </div>
+                    <div class="form-group">
+                        <label for="sgState">State</label>
+                        <input type="text" id="sgState" placeholder="State">
+                    </div>
+                    <div class="form-group">
+                        <label for="sgZip">ZIP Code</label>
+                        <input type="text" id="sgZip" placeholder="ZIP Code">
+                    </div>
+                    <div class="form-group">
+                        <label for="sgCountry">Country</label>
+                        <input type="text" id="sgCountry" placeholder="Country">
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-primary" onclick="generateSchema()"><i class="fas fa-magic"></i> Generate Schema</button>
+                    <button class="btn-secondary" onclick="copySchema()"><i class="fas fa-copy"></i> Copy Code</button>
+                    <button class="btn-secondary" onclick="validateSchema()"><i class="fas fa-check-circle"></i> Validate on Google</button>
+                </div>
+
+                <div id="schemaResult" style="display:none; margin-top:24px;">
+                    <div class="result-box">
+                        <h4>Generated Schema Markup <small style="font-weight:400; color:var(--gray);">(paste before &lt;/head&gt;)</small></h4>
+                        <pre id="schemaOutput" style="white-space:pre-wrap; font-family:'Courier New', monospace; font-size:0.85rem; line-height:1.6; background:var(--dark); color:#10b981; padding:20px; border-radius:var(--radius); overflow-x:auto;"></pre>
+                    </div>
+                </div>
+
+                <div style="margin-top:30px; padding:18px; background:rgba(79,70,229,0.05); border-left:4px solid var(--primary); border-radius:8px;">
+                    <strong style="color:var(--primary);"><i class="fas fa-lightbulb"></i> What is Schema Markup?</strong>
+                    <p style="font-size:0.9rem; margin-top:8px; color:var(--dark-light); line-height:1.7;">
+                        Schema markup (structured data) helps Google understand your page content better, enabling rich snippets 
+                        like star ratings, FAQ dropdowns, business info, and product prices directly in search results. 
+                        This can significantly improve your click-through rate (CTR).
+                    </p>
+                </div>
+            </div>
+
+            <div class="ad-sidebar mt-30">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProSoftwareTools.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/schema-generator.js"></script>
+</body>
+</html>

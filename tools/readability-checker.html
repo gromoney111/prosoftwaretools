@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Free online Readability Checker - Calculate Flesch Reading Ease, Flesch-Kincaid Grade Level, reading time, and get SEO recommendations. No signup required.">
+    <meta name="keywords" content="readability checker, flesch reading ease, flesch kincaid, grade level checker, readability score, content readability">
+    <meta property="og:title" content="Readability Checker - Free Online Readability Score Tool | ProSoftwareTools">
+    <meta property="og:description" content="Check your content readability with Flesch Reading Ease and Flesch-Kincaid Grade Level scores.">
+    <link rel="canonical" href="https://prosoftwaretools.com/tools/readability-checker.html">
+    <title>Readability Checker - Free Online Readability Score Tool | ProSoftwareTools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" alt="Pro Software Tools" style="height:40px;"></a>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#categories">Categories</a></li>
+                        <li><a href="../index.html#tools" class="active">All Tools</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../categories/content-creation.html">Content Creation</a></li>
+                <li>Readability Checker</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <a href="../index.html"><img src="../assets/favicon.svg" alt="ProSoftwareTools Logo" style="width:50px;height:50px;margin-bottom:10px;display:block;margin-left:auto;margin-right:auto;"></a>
+                <h1><i class="fas fa-book-reader"></i> Readability Checker</h1>
+                <p>Analyze your content readability with Flesch Reading Ease and Grade Level scores</p>
+            </div>
+
+            <div class="tool-wrapper">
+                <div class="form-group">
+                    <label for="contentInput">Paste Your Content</label>
+                    <textarea id="contentInput" placeholder="Paste your article, blog post, or any content here to check its readability score..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-primary" onclick="checkReadability()"><i class="fas fa-chart-line"></i> Check Readability</button>
+                    <button class="btn-secondary" onclick="clearContent()"><i class="fas fa-trash"></i> Clear</button>
+                </div>
+
+                <div class="result-box" id="resultBox" style="display:none;">
+                    <div id="scoreDisplay" style="text-align:center;margin-bottom:20px;">
+                        <div style="width:120px;height:120px;border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;border:8px solid #ddd;" id="readScoreCircle">
+                            <span style="font-size:2rem;font-weight:800;" id="readScoreValue">0</span>
+                        </div>
+                        <p style="font-weight:600;" id="readScoreLabel">Flesch Reading Ease</p>
+                        <p style="color:#666;font-size:0.9rem;" id="gradeInterpretation"></p>
+                    </div>
+
+                    <div class="stats-grid" style="margin-bottom:20px;">
+                        <div class="stat-box">
+                            <span class="number" id="gradeLevel">-</span>
+                            <span class="label">Grade Level</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number" id="totalWords">0</span>
+                            <span class="label">Words</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number" id="totalSentences">0</span>
+                            <span class="label">Sentences</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number" id="totalParagraphs">0</span>
+                            <span class="label">Paragraphs</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number" id="avgWordsPerSentence">0</span>
+                            <span class="label">Words/Sentence</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number" id="avgSyllables">0</span>
+                            <span class="label">Syllables/Word</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number" id="readingTime">0 min</span>
+                            <span class="label">Reading Time</span>
+                        </div>
+                    </div>
+
+                    <div id="seoRecommendation" style="padding:15px;border-radius:8px;margin-top:15px;"></div>
+                </div>
+            </div>
+
+            <!-- Ad -->
+            <div class="ad-sidebar mt-30">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProSoftwareTools.com. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart" style="color:#e74c3c;"></i> for professionals worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/tools/readability-checker.js"></script>
+</body>
+</html>

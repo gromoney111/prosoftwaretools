@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a free ProSoftwareTools account - Access premium features and save your favorite tools.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:title" content="Sign Up - ProSoftwareTools">
+    <meta property="og:description" content="Create your free ProSoftwareTools account.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://prosoftwaretools.com/signup.html">
+    <title>Sign Up - ProSoftwareTools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.svg" alt="Pro Software Tools" style="height:40px;">
+                </a>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#categories">Categories <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="categories/seo-marketing.html"><i class="fas fa-chart-line"></i> SEO & Marketing</a></li>
+                                <li><a href="categories/developer-coding.html"><i class="fas fa-code"></i> Developer & Coding</a></li>
+                                <li><a href="categories/content-creation.html"><i class="fas fa-pen-fancy"></i> Content Creation</a></li>
+                                <li><a href="categories/image-design.html"><i class="fas fa-palette"></i> Image & Design</a></li>
+                                <li><a href="categories/data-conversion.html"><i class="fas fa-database"></i> Data & Conversion</a></li>
+                                <li><a href="categories/business-productivity.html"><i class="fas fa-briefcase"></i> Business & Productivity</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html#tools">All Tools</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-login" id="authBtn"><i class="fas fa-user"></i> Login</a>
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Signup Page -->
+    <section class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <h1>Create Account</h1>
+                <p class="subtitle">Join ProSoftwareTools for free</p>
+
+                <div class="auth-error" id="authError"></div>
+                <div class="auth-success" id="authSuccess"></div>
+
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <div class="password-field">
+                            <input type="password" id="signupPassword" placeholder="Create a password (min 6 chars)" required>
+                            <button type="button" class="password-toggle"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="strength-meter">
+                            <div class="fill" id="strengthBar"></div>
+                        </div>
+                        <small id="strengthText" style="font-size:0.8rem;font-weight:600;"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupConfirmPassword">Confirm Password</label>
+                        <div class="password-field">
+                            <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required>
+                            <button type="button" class="password-toggle"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="flex-direction:row;align-items:center;gap:10px;margin-bottom:20px;">
+                        <input type="checkbox" id="termsAgree" style="width:18px;height:18px;accent-color:var(--primary);cursor:pointer;">
+                        <label for="termsAgree" style="font-size:0.85rem;font-weight:400;color:var(--gray);cursor:pointer;">
+                            I agree to the <a href="terms-of-service.html" style="color:var(--primary);font-weight:600;">Terms of Service</a> and <a href="privacy-policy.html" style="color:var(--primary);font-weight:600;">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="auth-btn">Create Account</button>
+                </form>
+
+                <div class="auth-links">
+                    Already have an account? <a href="login.html">Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/images/logo.svg" alt="Pro Software Tools" style="height:36px;">
+                    </a>
+                    <p>Free online tools for developers, designers, marketers, and professionals. Built with love for the community.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Popular Tools</h4>
+                    <ul>
+                        <li><a href="tools/word-counter.html">Word Counter</a></li>
+                        <li><a href="tools/qr-code-generator.html">QR Code Generator</a></li>
+                        <li><a href="tools/password-generator.html">Password Generator</a></li>
+                        <li><a href="tools/json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="tools/image-resizer.html">Image Resizer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories/seo-marketing.html">SEO & Marketing</a></li>
+                        <li><a href="categories/developer-coding.html">Developer & Coding</a></li>
+                        <li><a href="categories/content-creation.html">Content Creation</a></li>
+                        <li><a href="categories/image-design.html">Image & Design</a></li>
+                        <li><a href="categories/data-conversion.html">Data & Conversion</a></li>
+                        <li><a href="categories/business-productivity.html">Business & Productivity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProSoftwareTools.com. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart" style="color: #e74c3c;"></i> for professionals worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
