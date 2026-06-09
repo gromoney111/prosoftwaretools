@@ -2,7 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ProSoftwareTools">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ProSoftwareTools">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ProSoftwareTools - Free online tools for developers, designers, marketers, and professionals. Word Counter, QR Code Generator, JSON Formatter, Password Generator & more.">
@@ -531,5 +541,6 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
     <script src="js/firebase-config.js"></script>
     <script src="js/auth.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("/sw.js").catch(()=>/projects/sandbox/prosoftwaretools/index.html);}</script>
 </body>
 </html>
