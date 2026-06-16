@@ -640,6 +640,13 @@ input, textarea { font-family: var(--font); outline: none; }
     margin-bottom: 16px;
 }
 
+.footer-logo img {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    height: 36px;
+    width: auto;
+}
+
 .footer-logo i { color: var(--primary-light); }
 
 .footer-col p {
